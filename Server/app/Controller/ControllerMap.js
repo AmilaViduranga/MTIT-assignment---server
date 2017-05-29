@@ -1,11 +1,7 @@
-/**
- * Created by User on 9/9/2016.
- * developer: -Kasun
- * use as map for all the controllers allocating
- */
+
 var Controllers = {};
 
-Controllers.UserController = require('./ModuleControllers/UserController');
-Controllers.OrderController = require('./ModuleControllers/OrderController');
-Controllers.FoodController = require('./ModuleControllers/FoodController');
+Controllers.UserController = require('./EntityControllers/UserController');
+Controllers.AppointmentController = require('./EntityControllers/AppointmentController');
+
 module.exports = Controllers;

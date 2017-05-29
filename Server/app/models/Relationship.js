@@ -1,19 +1,12 @@
-/**
- * Created by Kausn on 9/7/2016.
- * create relationship in between each models.
- */
+
 var Models = require('./Models');
 var connection = require('./Connection');
 var Relationship = function() {
 
-    /**added by Kasun*/
-
-    //Models.UserRole.hasMany(Models.User)
-    //Models.User.belongsTo(Models.UserRole)
-    //Models.Department.belongsToMany(Models.Faculty,{through: 'DepartmentFaculty'})
-    //Models.Faculty.belongsToMany(Models.Department,{through: 'DepartmentFaculty'})
-    Models.Order.belongsToMany(Models.Food, {through: 'OrderFood'});
-    Models.Food.belongsToMany(Models.Order, {through: 'OrderFood'});
+    /**added by Amila*/
+    Models.Users.hasMany(Models.Appointment)
+    Models.Appointment.belongsTo(Models.Users)
+    Models.Appointment.belongsTo(Models.Users, {foreignKey: 'DoctorId', targetKey: 'id'})
 
     connection
         .sync()

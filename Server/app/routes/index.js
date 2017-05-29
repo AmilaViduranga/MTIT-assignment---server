@@ -7,12 +7,10 @@
 var express = require('express');
 var router = express.Router();
 
-var UserManagementRoute = require('./moduleRoutes/userManagement/UserManagementRoute');
-var FoodManagementRoute = require('./moduleRoutes/FoodManagement/FoodManagementRoute');
-var OrderManagementRoute = require('./moduleRoutes/orderManagement/OrderManagementRoute');
+var UserRouter = require('./moduleRoutes/UserRoutes');
+var AppointmentRouter = require('./moduleRoutes/AppointmentRoutes');
 
-router.use('/user-management/', UserManagementRoute);
-router.use('/food-management/', FoodManagementRoute);
-router.use('/order-management/', OrderManagementRoute);
+router.use('/user/', UserRouter);
+router.use('/appointment/', AppointmentRouter);
 
 module.exports = router;

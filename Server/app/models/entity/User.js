@@ -1,22 +1,18 @@
 /**
- * Created by User on 9/18/2016.
- * Develop: Kasun
- * Model: User
+ * Created by Amila on 5/20/2017.
  */
 var Sequelize = require('sequelize');
 var connection  = require('./../Connection');
 
-var User = connection.define('User', {
-    userPassword: Sequelize.STRING,
-    userUserName: Sequelize.STRING,
-    userFullname: Sequelize.STRING,
-    userEmail: Sequelize.STRING,
-    status: Sequelize.BOOLEAN
+var Users = connection.define('User', {
+    name: Sequelize.STRING,
+    password: Sequelize.STRING,
+    type: Sequelize.INTEGER
 },{
-    tableName: 'user',
+    tableName: 'User',
     updatedAt: 'updatedAt',
     createdAt: 'createdAt',
     paranoid: true
 });
 
-module.exports = User;
+module.exports = Users;
