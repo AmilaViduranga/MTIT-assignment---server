@@ -1,5 +1,5 @@
-
 var Sequelize = require('sequelize');
+
 var sequelize = require('sequelize')
     , sequelize = new Sequelize('channel', 'root', '', {
       dialect: "mysql",
